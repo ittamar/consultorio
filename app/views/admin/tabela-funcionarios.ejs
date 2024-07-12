@@ -1,0 +1,66 @@
+<%- include('../partials/admin/header-admin.ejs');%>
+
+<%-include("../partials/admin/navbar-admin.ejs");%>
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Tabela de Usuários</h2>
+    <table class="table table-striped">
+
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Password</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Deletar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% funcionario.forEach(function(empregado){%>
+          <tr>
+            <th scope="row">
+              <%=empregado.idnew_table%>
+            </th>
+            <td>
+              <%=empregado.name_funcionario%>
+            </td>
+            <td>
+              <%=empregado.password_funcionario%>
+            </td>
+            <td>
+              <a href="form-edit-employee?id=<%=empregado.idnew_table%>" class="btn btn-warning btn-sm">Editar</a>
+            </td>
+            <td>
+              <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete">Delete</button>
+              <!-- Modal -->
+              <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <p class="modal-title" id="exampleModalLabel">Gostaria de deletar este funcionário</p>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                     <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <form method="post" action="delete-funcionario">
+                        <input type="hidden" name="idDelete" value="<%= empregado.idnew_table %>">
+                        <button class="btn btn-primary" role="button">Sim</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </td>
+          </tr>
+
+          <% });%>
+         
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <%- include('../partials/admin/footer-admin.ejs');%>

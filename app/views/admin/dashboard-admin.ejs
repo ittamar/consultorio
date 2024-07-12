@@ -1,0 +1,66 @@
+<%-include('../partials/admin/header-admin.ejs')%>
+
+  <header>
+    <img class="rounded float-start" width="70px" src="image/logo3.png" alt="Logotipo do Site">
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+    </div>
+    
+
+  </header>
+  <%-include('../partials/admin/navbar-admin.ejs');%>
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <!-- First Card -->
+      <div class="col-md-6 mb-4" style="max-width: 25rem;">
+        <a href="addemployee" class="card card-clickable text-decoration-none text-bg-primary text-center">
+          <!-- <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card Image 1"> -->
+          <div class="card-body">
+            <h5 class="card-title">Adicionar Funcionário</h5>
+           
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 mb-4" style="max-width: 25rem;">
+        <a href="tabela-funcionarios" class="card card-clickable text-decoration-none text-bg-primary text-center">
+          <!-- <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card Image 1"> -->
+          <div class="card-body">
+            <h5 class="card-title">Visualizar Funcionário</h5>
+            
+          </div>
+        </a>
+      </div>
+      <!-- Second Card -->
+      <div class="col-md-6 mb-4" style="max-width: 25rem;">
+        <a href="https://example.com" class="card card-clickable text-decoration-none text-bg-primary text-center">
+          <!-- <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card Image 2"> -->
+          <div class="card-body">
+            <h5 class="card-title">Adicionar Exame</h5>
+            
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 mb-4" style="max-width: 25rem;">
+        <a href="https://example.com" class="card card-clickable text-decoration-none text-bg-primary text-center">
+          <!-- <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card Image 2"> -->
+          <div class="card-body">
+            <h5 class="card-title">Visualizar Exame</h5>
+          
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+
+    <%- include('../partials/admin/footer-admin.ejs');%>
+
+
+ 
